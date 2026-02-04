@@ -14,24 +14,43 @@
       line-height: 1.6;
     }
 
-    header {
-      background: #f9f9f9;
-      padding: 70px 20px;
+    /* HEADER */
+    .hero {
+      background: #ffffff;
+      padding: 60px 20px;
       text-align: center;
       border-bottom: 1px solid #eee;
     }
 
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-      font-weight: 600;
+    .logo {
+      width: 230px;
+      max-width: 85%;
+      margin-bottom: 20px;
     }
 
-    header p {
-      font-size: 1.2rem;
+    .tagline {
+      font-size: 1.1rem;
       color: #555;
+      margin-bottom: 25px;
     }
 
+    /* BUTTON */
+    .btn {
+      padding: 14px 28px;
+      border: none;
+      border-radius: 10px;
+      background: #4c7c6b;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background: #3c6657;
+    }
+
+    /* NAVIGATION */
     nav {
       position: sticky;
       top: 0;
@@ -53,6 +72,7 @@
       color: #4c7c6b;
     }
 
+    /* SECTIONS */
     section {
       max-width: 1100px;
       margin: auto;
@@ -65,22 +85,7 @@
       margin-bottom: 40px;
     }
 
-    .btn {
-      padding: 14px 28px;
-      border: none;
-      border-radius: 10px;
-      background: #4c7c6b;
-      color: white;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-
-    .btn:hover {
-      background: #3c6657;
-    }
-
-    /* SERVICES */
+    /* SERVICES GRID */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -101,6 +106,8 @@
       border: 1px solid #eee;
       border-radius: 14px;
       padding: 30px;
+      max-width: 650px;
+      margin: auto;
     }
 
     .pricing ul {
@@ -150,34 +157,49 @@
       resize: none;
     }
 
-    /* INSTAGRAM */
+    /* INSTAGRAM SECTION */
     .insta {
       text-align: center;
       padding: 30px;
       background: #f9f9f9;
       border-radius: 14px;
+      max-width: 700px;
+      margin: auto;
     }
 
+    /* CONTACT */
+    .contact-info {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 25px;
       background: #222;
       color: white;
+      margin-top: 40px;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <header>
-    <h1>🐾 Luxe Paws Grooming</h1>
-    <p>Clean • Modern • Premium Dog Grooming in Fraser Rise</p>
-    <br />
-    <a href="#booking"><button class="btn">Book an Appointment</button></a>
+  <!-- HERO HEADER WITH LOGO -->
+  <header class="hero">
+    <img src="logo.jpeg" alt="Luxe Paws Grooming Logo" class="logo">
+
+    <p class="tagline">
+      Premium Dog Grooming • Gentle Care • Luxury Finish
+    </p>
+
+    <a href="#booking">
+      <button class="btn">Book an Appointment</button>
+    </a>
   </header>
 
-  <!-- NAV -->
+  <!-- NAVIGATION -->
   <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
@@ -205,7 +227,7 @@
     <div class="grid">
       <div class="card">
         <h3>Full Groom Package</h3>
-        <p>Wash, haircut, nail trim, ear clean & styling.</p>
+        <p>Wash, haircut, nail trim, ear cleaning & styling.</p>
       </div>
 
       <div class="card">
@@ -220,7 +242,7 @@
 
       <div class="card">
         <h3>Puppy First Groom</h3>
-        <p>Gentle introduction grooming for young pups.</p>
+        <p>A gentle introduction grooming experience for pups.</p>
       </div>
     </div>
   </section>
@@ -231,10 +253,10 @@
 
     <div class="pricing">
       <ul>
-        <li>🐶 Small Dog Full Groom — <strong>$75</strong></li>
-        <li>🐕 Medium Dog Full Groom — <strong>$90</strong></li>
-        <li>🦮 Large Dog Full Groom — <strong>$125</strong></li>
-        <li>🛁 Bath & Brush — <strong>From $55</strong></li>
+        <li>🐶 Small Dog Full Groom — <strong>$90</strong></li>
+        <li>🐕 Medium Dog Full Groom — <strong>$120</strong></li>
+        <li>🦮 Large Dog Full Groom — <strong>$150</strong></li>
+        <li>🛁 Bath & Brush — <strong>From $60</strong></li>
         <li>✂️ Nail Trim — <strong>$20</strong></li>
         <li>🐾 Puppy Intro Groom — <strong>$70</strong></li>
       </ul>
@@ -253,7 +275,7 @@
     </div>
   </section>
 
-  <!-- BOOKING -->
+  <!-- BOOKING FORM -->
   <section id="booking">
     <h2>Online Booking</h2>
 
@@ -263,7 +285,10 @@
       <input type="text" placeholder="Dog Breed / Size" required>
       <input type="date" required>
       <textarea placeholder="Special Requests (optional)"></textarea>
-      <button class="btn" type="submit">Submit Booking Request</button>
+
+      <button class="btn" type="submit">
+        Submit Booking Request
+      </button>
     </form>
   </section>
 
@@ -274,7 +299,10 @@
     <div class="insta">
       <p>See our latest grooms, before & after photos, and happy pups!</p>
       <p><strong>@luxepawsgrooming</strong></p>
-      <button class="btn">Visit Instagram</button>
+
+      <a href="https://instagram.com" target="_blank">
+        <button class="btn">Visit Instagram</button>
+      </a>
     </div>
   </section>
 
@@ -282,11 +310,11 @@
   <section id="contact">
     <h2>Contact</h2>
 
-    <p style="text-align:center;">
-      📍 Fraser Rise, Victoria <br />
-      📞 0487 425 672 <br />
-      📧 info@luxepawsgrooming.com
-    </p>
+    <div class="contact-info">
+      📍 Fraser Rise, Victoria <br><br>
+      📞 0412 828 016 <br><br>
+      🌐 www.luxepawsgrooming.com.au
+    </div>
   </section>
 
   <!-- FOOTER -->
@@ -295,5 +323,4 @@
   </footer>
 
 </body>
-
 </html>
