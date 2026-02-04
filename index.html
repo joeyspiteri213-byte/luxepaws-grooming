@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxe Paws Grooming</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #ffffff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #f9f9f9;
+      padding: 70px 20px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: white;
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+      z-index: 10;
+    }
+
+    nav a {
+      margin: 0 18px;
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #4c7c6b;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      border: none;
+      border-radius: 10px;
+      background: #4c7c6b;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background: #3c6657;
+    }
+
+    /* SERVICES */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #f7f7f7;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+
+    /* PRICING */
+    .pricing {
+      background: #fdfdfd;
+      border: 1px solid #eee;
+      border-radius: 14px;
+      padding: 30px;
+    }
+
+    .pricing ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+    }
+
+    .pricing li {
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 14px;
+      object-fit: cover;
+    }
+
+    /* BOOKING FORM */
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #f7f7f7;
+      padding: 35px;
+      border-radius: 14px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      margin: 12px 0;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      font-size: 1rem;
+    }
+
+    textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    /* INSTAGRAM */
+    .insta {
+      text-align: center;
+      padding: 30px;
+      background: #f9f9f9;
+      border-radius: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #222;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header>
+    <h1>🐾 Luxe Paws Grooming</h1>
+    <p>Clean • Modern • Premium Dog Grooming in Fraser Rise</p>
+    <br />
+    <a href="#booking"><button class="btn">Book an Appointment</button></a>
+  </header>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#booking">Booking</a>
+    <a href="#instagram">Instagram</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Luxe Paws</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+      Luxe Paws Grooming provides professional, gentle grooming services for dogs
+      of all breeds and sizes. We focus on comfort, hygiene, and a luxury finish —
+      so every pet leaves looking and feeling amazing.
+    </p>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <h2>Our Services</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Full Groom Package</h3>
+        <p>Wash, haircut, nail trim, ear clean & styling.</p>
+      </div>
+
+      <div class="card">
+        <h3>Bath & Brush</h3>
+        <p>Perfect for keeping coats fresh and shiny.</p>
+      </div>
+
+      <div class="card">
+        <h3>Nail & Paw Care</h3>
+        <p>Nail trimming, paw balm & hygiene tidy.</p>
+      </div>
+
+      <div class="card">
+        <h3>Puppy First Groom</h3>
+        <p>Gentle introduction grooming for young pups.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <h2>Pricing</h2>
+
+    <div class="pricing">
+      <ul>
+        <li>🐶 Small Dog Full Groom — <strong>$90</strong></li>
+        <li>🐕 Medium Dog Full Groom — <strong>$120</strong></li>
+        <li>🦮 Large Dog Full Groom — <strong>$150</strong></li>
+        <li>🛁 Bath & Brush — <strong>From $60</strong></li>
+        <li>✂️ Nail Trim — <strong>$20</strong></li>
+        <li>🐾 Puppy Intro Groom — <strong>$70</strong></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+
+    <div class="gallery">
+      <img src="https://placedog.net/500/300?id=1" alt="Dog Groom 1">
+      <img src="https://placedog.net/500/300?id=2" alt="Dog Groom 2">
+      <img src="https://placedog.net/500/300?id=3" alt="Dog Groom 3">
+      <img src="https://placedog.net/500/300?id=4" alt="Dog Groom 4">
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="booking">
+    <h2>Online Booking</h2>
+
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Dog Breed / Size" required>
+      <input type="date" required>
+      <textarea placeholder="Special Requests (optional)"></textarea>
+      <button class="btn" type="submit">Submit Booking Request</button>
+    </form>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section id="instagram">
+    <h2>Follow Us</h2>
+
+    <div class="insta">
+      <p>See our latest grooms, before & after photos, and happy pups!</p>
+      <p><strong>@luxepawsgrooming</strong></p>
+      <button class="btn">Visit Instagram</button>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+
+    <p style="text-align:center;">
+      📍 Fraser Rise, Victoria <br />
+      📞 04XX XXX XXX <br />
+      📧 info@luxepawsgrooming.com
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Luxe Paws Grooming — All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
