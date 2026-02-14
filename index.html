@@ -135,33 +135,35 @@
       object-fit: cover;
     }
      
-  <!-- BOOKING FORM -->
+    <!-- BOOKING FORM -->
   <section id="booking">
     <h2>Online Booking</h2>
 
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <input type="text" placeholder="Dog Breed / Size" required>
-      <input type="date" required>
-      <textarea placeholder="Special Requests (optional)"></textarea>
+    <div class="booking-wrapper">
 
-      <button class="btn" type="submit">
-        Submit Booking Request
-      </button>
-    </form>
+      <form id="booking-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Dog Breed / Size" required>
+        <input type="date" required>
+        <textarea placeholder="Special Requests (optional)"></textarea>
 
-    <!-- SQUARE DEPOSIT PAYMENT -->
-    <div style="text-align:center; margin-top:40px;">
-      <h3>$50 Booking Deposit</h3>
-      <p>A $50 deposit is required to secure your appointment.</p>
-
-      <a href="https://square.link/u/UrsDC0D3" target="_blank">
-        <button type="button" class="btn">
-          Pay $40 Deposit
+        <button class="btn full-width" type="submit">
+          Submit Booking Request
         </button>
-      </a>
+      </form>
+
+      <div class="deposit-box">
+        <h3>$50 Booking Deposit</h3>
+        <p>A $50 deposit is required to secure your appointment.</p>
+
+        <a href="https://square.link/u/UrsDC0D3" target="_blank" class="deposit-btn">
+          Pay $50 Deposit
+        </a>
+      </div>
+
     </div>
+  </section>
 
   </section>
 
@@ -283,22 +285,53 @@
     </div>
   </section>
 
-  <!-- BOOKING FORM -->
-  <section id="booking">
-    <h2>Online Booking</h2>
+  /* BOOKING LAYOUT */
+.booking-wrapper {
+  max-width: 700px;
+  margin: auto;
+}
 
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <input type="text" placeholder="Dog Breed / Size" required>
-      <input type="date" required>
-      <textarea placeholder="Special Requests (optional)"></textarea>
+#booking-form input,
+#booking-form textarea {
+  background: white;
+  border: 1px solid #ccc;
+  transition: 0.2s;
+}
 
-      <button class="btn" type="submit">
-        Submit Booking Request
-      </button>
-    </form>
-  </section>
+#booking-form input:focus,
+#booking-form textarea:focus {
+  border-color: #4c7c6b;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(76,124,107,0.2);
+}
+
+.full-width {
+  width: 100%;
+}
+
+.deposit-box {
+  margin-top: 40px;
+  background: #f4f8f6;
+  padding: 30px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.deposit-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 14px 28px;
+  border-radius: 10px;
+  background: #4c7c6b;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.deposit-btn:hover {
+  background: #3c6657;
+}
 
   <!-- SOCIAL MEDIA -->
   <section id="social">
@@ -343,6 +376,7 @@
 
 </body>
 </html>
+
 
 
 
