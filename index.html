@@ -137,26 +137,35 @@
 
     /* BOOKING FORM */
     form {
-      max-width: 600px;
-      margin: auto;
-      background: #f7f7f7;
-      padding: 35px;
-      border-radius: 14px;
-    }
+        <!-- BOOKING FORM -->
+  <section id="booking">
+    <h2>Online Booking</h2>
 
-    input, textarea {
-      width: 100%;
-      padding: 14px;
-      margin: 12px 0;
-      border-radius: 10px;
-      border: 1px solid #ddd;
-      font-size: 1rem;
-    }
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Dog Breed / Size" required>
+      <input type="date" required>
+      <textarea placeholder="Special Requests (optional)"></textarea>
 
-    textarea {
-      height: 120px;
-      resize: none;
-    }
+      <button class="btn" type="submit">
+        Submit Booking Request
+      </button>
+    </form>
+
+    <!-- SQUARE DEPOSIT PAYMENT -->
+    <div style="text-align:center; margin-top:40px;">
+      <h3>$50 Booking Deposit</h3>
+      <p>A $50 deposit is required to secure your appointment.</p>
+
+      <a href="https://square.link/u/UrsDC0D3" target="_blank">
+        <button type="button" class="btn">
+          Pay $40 Deposit
+        </button>
+      </a>
+    </div>
+
+  </section>
 
     /* SOCIAL SECTION */
     .social-box {
@@ -336,6 +345,7 @@
 
 </body>
 </html>
+
 
 
 
