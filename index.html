@@ -134,38 +134,29 @@
       border-radius: 14px;
       object-fit: cover;
     }
-     
-    <!-- BOOKING FORM -->
-  <section id="booking">
-    <h2>Online Booking</h2>
 
-    <div class="booking-wrapper">
+    /* BOOKING FORM */
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #f7f7f7;
+      padding: 35px;
+      border-radius: 14px;
+    }
 
-      <form id="booking-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <input type="text" placeholder="Dog Breed / Size" required>
-        <input type="date" required>
-        <textarea placeholder="Special Requests (optional)"></textarea>
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      margin: 12px 0;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      font-size: 1rem;
+    }
 
-        <button class="btn full-width" type="submit">
-          Submit Booking Request
-        </button>
-      </form>
-
-      <div class="deposit-box">
-        <h3>$50 Booking Deposit</h3>
-        <p>A $50 deposit is required to secure your appointment.</p>
-
-        <a href="https://square.link/u/UrsDC0D3" target="_blank" class="deposit-btn">
-          Pay $50 Deposit
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  </section>
+    textarea {
+      height: 120px;
+      resize: none;
+    }
 
     /* SOCIAL SECTION */
     .social-box {
@@ -198,7 +189,7 @@
 
   <!-- HERO HEADER WITH LOGO -->
   <header class="hero">
-    <img src="logo.jpeg.JPG" alt="Luxe Paws Grooming Logo" class="logo">
+    <img src="logo.jpeg" alt="Luxe Paws Grooming Logo" class="logo">
 
     <p class="tagline">
       Premium Dog Grooming • Gentle Care • Luxury Finish
@@ -285,53 +276,22 @@
     </div>
   </section>
 
-  /* BOOKING LAYOUT */
-.booking-wrapper {
-  max-width: 700px;
-  margin: auto;
-}
+  <!-- BOOKING FORM -->
+  <section id="booking">
+    <h2>Online Booking</h2>
 
-#booking-form input,
-#booking-form textarea {
-  background: white;
-  border: 1px solid #ccc;
-  transition: 0.2s;
-}
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Dog Breed / Size" required>
+      <input type="date" required>
+      <textarea placeholder="Special Requests (optional)"></textarea>
 
-#booking-form input:focus,
-#booking-form textarea:focus {
-  border-color: #4c7c6b;
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(76,124,107,0.2);
-}
-
-.full-width {
-  width: 100%;
-}
-
-.deposit-box {
-  margin-top: 40px;
-  background: #f4f8f6;
-  padding: 30px;
-  border-radius: 14px;
-  text-align: center;
-}
-
-.deposit-btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 14px 28px;
-  border-radius: 10px;
-  background: #4c7c6b;
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.2s;
-}
-
-.deposit-btn:hover {
-  background: #3c6657;
-}
+      <button class="btn" type="submit">
+        Submit Booking Request
+      </button>
+    </form>
+  </section>
 
   <!-- SOCIAL MEDIA -->
   <section id="social">
@@ -346,7 +306,7 @@
       </a>
 
       <!-- Facebook Page -->
-      <a href="https://facebook.com/luxpawsgroomingau" target="_blank">
+      <a href="https://facebook.com/YOURFACEBOOKPAGENAME" target="_blank">
         <button class="btn">Visit Facebook</button>
       </a>
     </div>
@@ -362,8 +322,8 @@
       🌐 www.luxepawsgrooming.com.au <br><br>
 
       <!-- Facebook Link -->
-      📘 Facebook:
-      <a href="https://facebook.com/luxepawsgroomingau" target="_blank">
+      📘 Facebook: 
+      <a href="https://facebook.com/YOURFACEBOOKPAGENAME" target="_blank">
         Luxe Paws Grooming
       </a>
     </div>
@@ -376,6 +336,8 @@
 
 </body>
 </html>
+
+
 
 
 
