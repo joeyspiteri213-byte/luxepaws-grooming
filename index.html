@@ -18,7 +18,6 @@
     letter-spacing: 1px;
   }
 
-  /* HERO */
   .hero {
     background: linear-gradient(135deg, #edf6ff, #f7fbff);
     padding: 90px 20px;
@@ -38,7 +37,6 @@
     margin-bottom: 35px;
   }
 
-  /* BUTTON */
   .btn {
     padding: 15px 32px;
     border-radius: 40px;
@@ -57,7 +55,6 @@
     box-shadow: 0 14px 35px rgba(77, 166, 255, 0.4);
   }
 
-  /* NAV */
   nav {
     position: sticky;
     top: 0;
@@ -94,7 +91,6 @@
     font-weight: 600;
   }
 
-  /* SERVICES */
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -115,11 +111,6 @@
     box-shadow: 0 25px 50px rgba(0,0,0,0.08);
   }
 
-  .card h3 {
-    margin-bottom: 15px;
-  }
-
-  /* PRICING */
   .pricing {
     background: white;
     padding: 50px;
@@ -144,7 +135,6 @@
     border-bottom: none;
   }
 
-  /* GALLERY */
   .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -162,7 +152,6 @@
     transform: scale(1.05);
   }
 
-  /* FORM */
   form {
     background: white;
     padding: 50px;
@@ -193,7 +182,6 @@
     resize: none;
   }
 
-  /* SOCIAL */
   .social-box {
     text-align: center;
     padding: 50px;
@@ -204,13 +192,11 @@
     box-shadow: 0 15px 40px rgba(0,0,0,0.05);
   }
 
-  /* CONTACT */
   .contact-info {
     text-align: center;
     font-size: 1.1rem;
   }
 
-  /* FOOTER */
   footer {
     text-align: center;
     padding: 40px;
@@ -297,13 +283,22 @@
 
 <section id="booking">
   <h2>Online Booking</h2>
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <input type="text" placeholder="Dog Breed / Size" required>
-    <input type="date" required>
-    <textarea placeholder="Special Requests (optional)"></textarea>
-    <button class="btn" type="submit">Submit Booking Request</button>
+
+  <form action="https://formsubmit.co/jade@luxepawsgrooming.com.au" method="POST">
+
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New Luxe Paws Booking Request!">
+
+    <input type="text" name="Name" placeholder="Your Name" required>
+    <input type="email" name="Email" placeholder="Your Email" required>
+    <input type="text" name="Dog Breed / Size" placeholder="Dog Breed / Size" required>
+    <input type="date" name="Preferred Date" required>
+    <textarea name="Special Requests" placeholder="Special Requests (optional)"></textarea>
+
+    <button class="btn" type="submit">
+      Submit Booking Request
+    </button>
+
   </form>
 </section>
 
@@ -321,8 +316,7 @@
   <div class="contact-info">
     📍 Fraser Rise, Victoria <br><br>
     📞 0412 828 016 <br><br>
-    🌐 www.luxepawsgrooming.com.au <br><br>
-    📘 Facebook: Luxe Paws Grooming
+    🌐 www.luxepawsgrooming.com.au
   </div>
 </section>
 
@@ -332,6 +326,7 @@
 
 </body>
 </html>
+
 
 
 
