@@ -6,9 +6,10 @@
 <title>Luxe Paws Grooming</title>
 
 <style>
+  /* Base */
   body {
     margin: 0;
-    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+    font-family: "Helvetica Neue", "Segoe UI", sans-serif;
     background: #fff;
     color: #111;
     line-height: 1.6;
@@ -16,8 +17,10 @@
 
   h1, h2, h3 {
     letter-spacing: 1px;
+    font-weight: 600;
   }
 
+  /* Hero */
   .hero {
     background: #000;
     color: #fff;
@@ -29,7 +32,7 @@
     width: 240px;
     max-width: 85%;
     margin-bottom: 25px;
-    filter: brightness(0) invert(1); /* white logo if possible */
+    filter: brightness(0) invert(1); /* white logo */
   }
 
   .tagline {
@@ -38,58 +41,63 @@
     margin-bottom: 35px;
   }
 
+  /* Buttons */
   .btn {
-    padding: 15px 32px;
-    border-radius: 40px;
-    border: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    border: 1px solid #111;
     background: #111;
     color: #fff;
     font-weight: 600;
     font-size: 1rem;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: 0.3s;
   }
 
   .btn:hover {
-    background: #444;
+    background: #fff;
+    color: #111;
+    border: 1px solid #111;
   }
 
+  /* Nav */
   nav {
     position: sticky;
     top: 0;
-    background: #111;
+    background: #fff;
     padding: 18px;
     text-align: center;
+    border-bottom: 1px solid #eee;
     z-index: 10;
   }
 
   nav a {
     margin: 0 22px;
     text-decoration: none;
-    color: #fff;
+    color: #111;
     font-weight: 500;
     font-size: 0.95rem;
     transition: 0.3s;
   }
 
   nav a:hover {
-    color: #aaa;
+    color: #555;
   }
 
+  /* Sections */
   section {
     max-width: 1100px;
     margin: auto;
-    padding: 100px 20px;
+    padding: 80px 20px;
   }
 
   h2 {
     text-align: center;
     font-size: 2.4rem;
     margin-bottom: 50px;
-    font-weight: 600;
-    color: #111;
   }
 
+  /* Cards */
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -101,20 +109,21 @@
     padding: 35px;
     border-radius: 22px;
     text-align: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
     transition: 0.4s ease;
   }
 
   .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.08);
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
   }
 
+  /* Pricing */
   .pricing {
     background: #fff;
     padding: 50px;
     border-radius: 24px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
     max-width: 700px;
     margin: auto;
   }
@@ -135,23 +144,27 @@
     border-bottom: none;
   }
 
+  /* Gallery */
   .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
   }
 
   .gallery img {
     width: 100%;
-    border-radius: 22px;
+    border-radius: 18px;
     object-fit: cover;
+    filter: grayscale(20%);
     transition: 0.4s ease;
   }
 
   .gallery img:hover {
-    transform: scale(1.05);
+    filter: grayscale(0%);
+    transform: scale(1.03);
   }
 
+  /* Form */
   form {
     background: #fff;
     padding: 50px;
@@ -166,15 +179,17 @@
     padding: 16px;
     margin: 14px 0;
     border-radius: 14px;
-    border: 1px solid #ccc;
+    border: 1px solid #111;
     font-size: 1rem;
     transition: 0.3s;
+    background: #fff;
+    color: #111;
   }
 
   input:focus, textarea:focus {
     outline: none;
     border-color: #111;
-    box-shadow: 0 0 0 4px rgba(0,0,0,0.1);
+    box-shadow: 0 0 0 4px rgba(0,0,0,0.05);
   }
 
   textarea {
@@ -182,6 +197,7 @@
     resize: none;
   }
 
+  /* Social */
   .social-box {
     text-align: center;
     padding: 50px;
@@ -192,19 +208,27 @@
     box-shadow: 0 15px 40px rgba(0,0,0,0.05);
   }
 
+  .social-box img {
+    vertical-align: middle;
+    margin-right: 8px;
+    width: 24px;
+  }
+
+  /* Contact */
   .contact-info {
     text-align: center;
     font-size: 1.1rem;
   }
 
+  /* Footer */
   footer {
     text-align: center;
     padding: 40px;
     background: #111;
     color: #fff;
-    margin-top: 80px;
     font-size: 0.9rem;
   }
+
 </style>
 </head>
 
@@ -274,25 +298,22 @@
 <section id="gallery">
   <h2>Gallery — Freshly Groomed Dogs</h2>
   <div class="gallery">
-    <img src="https://images.pexels.com/photos/4587997/pexels-photo-4587997.jpeg" alt="Freshly Groomed Dog 1">
-    <img src="https://images.pexels.com/photos/4588001/pexels-photo-4588001.jpeg" alt="Freshly Groomed Dog 2">
-    <img src="https://images.pexels.com/photos/4587993/pexels-photo-4587993.jpeg" alt="Freshly Groomed Dog 3">
-    <img src="https://images.pexels.com/photos/4587974/pexels-photo-4587974.jpeg" alt="Freshly Groomed Dog 4">
-    <img src="https://images.pexels.com/photos/4587989/pexels-photo-4587989.jpeg" alt="Freshly Groomed Dog 5">
-    <img src="https://images.pexels.com/photos/4587979/pexels-photo-4587979.jpeg" alt="Freshly Groomed Dog 6">
-    <img src="https://images.pexels.com/photos/4587986/pexels-photo-4587986.jpeg" alt="Freshly Groomed Dog 7">
-    <img src="https://images.pexels.com/photos/4587963/pexels-photo-4587963.jpeg" alt="Freshly Groomed Dog 8">
-    <img src="https://images.pexels.com/photos/4587960/pexels-photo-4587960.jpeg" alt="Freshly Groomed Dog 9">
-    <img src="https://images.pexels.com/photos/4587957/pexels-photo-4587957.jpeg" alt="Freshly Groomed Dog 10">
+    <img src="https://images.pexels.com/photos/4587997/pexels-photo-4587997.jpeg" alt="Dog 1">
+    <img src="https://images.pexels.com/photos/4588001/pexels-photo-4588001.jpeg" alt="Dog 2">
+    <img src="https://images.pexels.com/photos/4587993/pexels-photo-4587993.jpeg" alt="Dog 3">
+    <img src="https://images.pexels.com/photos/4587974/pexels-photo-4587974.jpeg" alt="Dog 4">
+    <img src="https://images.pexels.com/photos/4587989/pexels-photo-4587989.jpeg" alt="Dog 5">
+    <img src="https://images.pexels.com/photos/4587979/pexels-photo-4587979.jpeg" alt="Dog 6">
+    <img src="https://images.pexels.com/photos/4587986/pexels-photo-4587986.jpeg" alt="Dog 7">
+    <img src="https://images.pexels.com/photos/4587963/pexels-photo-4587963.jpeg" alt="Dog 8">
+    <img src="https://images.pexels.com/photos/4587960/pexels-photo-4587960.jpeg" alt="Dog 9">
+    <img src="https://images.pexels.com/photos/4587957/pexels-photo-4587957.jpeg" alt="Dog 10">
   </div>
 </section>
 
-
 <section id="booking">
   <h2>Online Booking</h2>
-
   <form action="https://formsubmit.co/jade@luxepawsgrooming.com.au" method="POST">
-
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_subject" value="New Luxe Paws Booking Request!">
 
@@ -303,10 +324,7 @@
     <input type="time" name="Preferred Time" required>
     <textarea name="Special Requests" placeholder="Special Requests (optional)"></textarea>
 
-    <button class="btn" type="submit">
-      Submit Booking Request
-    </button>
-
+    <button class="btn" type="submit">Submit Booking Request</button>
   </form>
 </section>
 
@@ -314,7 +332,12 @@
   <h2>Follow Us</h2>
   <div class="social-box">
     <p>See our latest grooms, happy pups, and updates online!</p>
-    <a href="https://facebook.com/luxepawsgroomingau" target="_blank"><button class="btn">Visit Facebook</button></a>
+    <a href="https://www.facebook.com/luxepawsgroomingau" target="_blank">
+      <button class="btn">
+        <img src="facebook-logo.png" alt="Facebook">
+        Visit Facebook
+      </button>
+    </a>
   </div>
 </section>
 
@@ -334,9 +357,6 @@
 
 </body>
 </html>
-
-
-
 
 
 
