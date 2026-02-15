@@ -17,7 +17,7 @@ body {
   position: relative;
 }
 
-/* Subtle Paw Background (CSS only) */
+/* Subtle Paw Background */
 body::before {
   content: "🐾 🐾 🐾 🐾 🐾 🐾 🐾 🐾";
   position: fixed;
@@ -40,9 +40,9 @@ body::before {
 }
 
 .logo-wrapper img {
-  height: 120px;       /* fixed height */
-  width: 100%;         /* stretches full width */
-  object-fit: contain;  /* maintains proportions */
+  height: 120px;      
+  width: 100%;        
+  object-fit: contain; 
   display: block;
 }
 
@@ -118,6 +118,29 @@ footer {
   padding: 40px 20px;
   font-size: 14px;
 }
+
+/* SOCIAL ICONS */
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #d4af37;
+}
+
+/* SQUARE WIDGET CONTAINER */
+#square-widget {
+  min-height: 600px;
+  margin-top: 40px;
+}
 </style>
 </head>
 
@@ -136,8 +159,10 @@ footer {
 <!-- BOOKING SECTION -->
 <section id="booking">
   <h2>BOOK AN APPOINTMENT</h2>
-  <div style="text-align:center; max-width:900px; margin:auto;">
-   <!-- Start Square Appointments Embed Code --><script src='https://app.squareup.com/appointments/buyer/widget/dd2degs8bq3caj/LVY808G3TP4RZ.js'></script><!-- End Square Appointments Embed Code -->
+  <div id="square-widget" style="max-width:900px; margin:auto;">
+    <!-- Start Square Appointments Embed Code -->
+    <script src="https://app.squareup.com/appointments/buyer/widget/dd2degs8bq3caj/LVY808G3TP4RZ.js" defer></script>
+    <!-- End Square Appointments Embed Code -->
   </div>
 </section>
 
@@ -162,7 +187,11 @@ footer {
 <section id="contact">
   <h2>CONTACT</h2>
   <p>Email: <a href="mailto:admin@luxepawsgrooming.com.au">admin@luxepawsgrooming.com.au</a></p>
-  <p>Follow us on Facebook & Instagram</p>
+  <p>Follow us:</p>
+  <div class="social-links">
+    <a href="https://www.facebook.com/luxepawsgroomingau" target="_blank">🔵 Facebook</a>
+    
+  </div>
 </section>
 
 <!-- FOOTER -->
@@ -172,4 +201,3 @@ footer {
 
 </body>
 </html>
-
