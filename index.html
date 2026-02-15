@@ -6,47 +6,56 @@
 <title>Luxe Paws Grooming</title>
 
 <style>
+
   body {
     margin: 0;
     font-family: "Helvetica Neue", "Segoe UI", sans-serif;
-    background: #fff;
+    background-color: #f8f8f8;
     color: #111;
     line-height: 1.6;
     scroll-behavior: smooth;
+
+    /* Subtle paw background */
+    background-image: url("https://www.transparenttextures.com/patterns/paws.png");
+    background-size: 300px;
+    background-repeat: repeat;
+    background-blend-mode: overlay;
+    opacity: 1;
   }
 
   h1, h2, h3 {
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     font-weight: 600;
   }
 
   /* Hero */
   .hero {
-    background: #000;
+    background: linear-gradient(to bottom, #000, #111);
     color: #fff;
-    padding: 100px 20px;
+    padding: 120px 20px;
     text-align: center;
   }
 
   .logo {
-    width: 240px;
+    width: 260px;
     max-width: 85%;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     filter: brightness(0) invert(1);
   }
 
   .tagline {
     font-size: 1.1rem;
-    color: #ccc;
-    margin-bottom: 35px;
+    color: #d4af37; /* gold accent */
+    margin-bottom: 40px;
+    letter-spacing: 2px;
   }
 
   /* Buttons */
   .btn {
-    padding: 14px 30px;
+    padding: 15px 34px;
     border-radius: 30px;
-    border: 1px solid #fff;
-    background: #fff;
+    border: 1px solid #d4af37;
+    background: #d4af37;
     color: #000;
     font-weight: 600;
     font-size: 1rem;
@@ -56,8 +65,7 @@
 
   .btn:hover {
     background: #000;
-    color: #fff;
-    border: 1px solid #fff;
+    color: #d4af37;
   }
 
   /* Nav */
@@ -65,14 +73,14 @@
     position: sticky;
     top: 0;
     background: #fff;
-    padding: 18px;
+    padding: 20px;
     text-align: center;
     border-bottom: 1px solid #eee;
     z-index: 10;
   }
 
   nav a {
-    margin: 0 22px;
+    margin: 0 25px;
     text-decoration: none;
     color: #111;
     font-weight: 500;
@@ -81,60 +89,70 @@
   }
 
   nav a:hover {
-    color: #555;
+    color: #d4af37;
   }
 
   section {
     max-width: 1100px;
     margin: auto;
-    padding: 90px 20px;
+    padding: 100px 20px;
   }
 
   h2 {
     text-align: center;
-    font-size: 2.4rem;
-    margin-bottom: 50px;
+    font-size: 2.6rem;
+    margin-bottom: 60px;
+    position: relative;
+  }
+
+  h2:after {
+    content: "";
+    width: 60px;
+    height: 2px;
+    background: #d4af37;
+    display: block;
+    margin: 15px auto 0;
   }
 
   /* Cards */
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 35px;
+    gap: 40px;
   }
 
   .card {
     background: #fff;
-    padding: 35px;
-    border-radius: 22px;
+    padding: 40px;
+    border-radius: 24px;
     text-align: center;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.06);
     transition: 0.4s ease;
   }
 
   .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+    transform: translateY(-6px);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.1);
   }
 
   /* Pricing */
   .pricing {
     background: #fff;
-    padding: 50px;
-    border-radius: 24px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
-    max-width: 700px;
+    padding: 60px;
+    border-radius: 28px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+    max-width: 750px;
     margin: auto;
   }
 
   .pricing ul {
     list-style: none;
     padding: 0;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
   }
 
   .pricing li {
-    padding: 16px 0;
+    padding: 18px 0;
     border-bottom: 1px solid #eee;
   }
 
@@ -146,42 +164,36 @@
   .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
+    gap: 30px;
   }
 
   .gallery img {
     width: 100%;
-    border-radius: 18px;
-    object-fit: cover;
+    border-radius: 20px;
     transition: 0.4s ease;
   }
 
   .gallery img:hover {
-    transform: scale(1.03);
+    transform: scale(1.04);
   }
 
   /* Booking */
   #booking {
-    background: #f9f9f9;
+    background: #fff;
     border-radius: 30px;
-    padding: 70px 30px;
+    padding: 80px 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.05);
   }
 
   /* Social */
   .social-box {
     text-align: center;
-    padding: 50px;
+    padding: 60px;
     background: #fff;
-    border-radius: 24px;
+    border-radius: 30px;
     max-width: 750px;
     margin: auto;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
-  }
-
-  .social-box img {
-    vertical-align: middle;
-    margin-right: 8px;
-    width: 24px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.05);
   }
 
   /* Contact */
@@ -192,10 +204,11 @@
 
   footer {
     text-align: center;
-    padding: 40px;
-    background: #111;
+    padding: 50px;
+    background: #000;
     color: #fff;
     font-size: 0.9rem;
+    letter-spacing: 1px;
   }
 
 </style>
@@ -205,8 +218,8 @@
 
 <header class="hero">
   <img src="logo.JPG" alt="Luxe Paws Grooming Logo" class="logo">
-  <p class="tagline">Premium Dog Grooming • Gentle Care • Luxury Finish</p>
-  <a href="#booking"><button class="btn">Book an Appointment</button></a>
+  <p class="tagline">PREMIUM • GENTLE • LUXURY FINISH</p>
+  <a href="#booking"><button class="btn">Book Your Appointment</button></a>
 </header>
 
 <nav>
@@ -215,16 +228,15 @@
   <a href="#pricing">Pricing</a>
   <a href="#gallery">Gallery</a>
   <a href="#booking">Booking</a>
-  <a href="#social">Social</a>
   <a href="#contact">Contact</a>
 </nav>
 
 <section id="about">
   <h2>About Luxe Paws</h2>
   <p style="text-align:center; max-width:800px; margin:auto;">
-    Luxe Paws Grooming provides professional, gentle grooming services for dogs
-    of all breeds and sizes. We focus on comfort, hygiene, and a luxury finish —
-    so every pet leaves looking and feeling amazing.
+    Luxe Paws Grooming offers refined, professional grooming services with
+    gentle care and attention to detail. Every appointment is designed to
+    provide a calm, luxury experience for your beloved companion.
   </p>
 </section>
 
@@ -232,8 +244,50 @@
   <h2>Our Services</h2>
   <div class="grid">
     <div class="card">
-      <h3>Full Groom Package</h3>
-      <p>Wash, haircut, nail trim, ear cleaning & styling.</p>
+      <h3>Full Groom</h3>
+      <p>Complete wash, precision styling & finishing.</p>
     </div>
     <div class="card">
-      <h3>Bath & Brush</h3>
+      <h3>Bath & Blow Dry</h3>
+      <p>Refreshing cleanse & coat conditioning.</p>
+    </div>
+    <div class="card">
+      <h3>Puppy Groom</h3>
+      <p>Gentle first grooming experience.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2>Pricing</h2>
+  <div class="pricing">
+    <ul>
+      <li>Full Groom — <strong>From $80</strong></li>
+      <li>Bath & Blow Dry — <strong>From $40</strong></li>
+      <li>Puppy Groom — <strong>From $40</strong></li>
+    </ul>
+  </div>
+</section>
+
+<section id="booking">
+  <h2>Book Online</h2>
+  <div style="text-align:center; max-width:900px; margin:auto;">
+    <script src="https://app.squareup.com/appointments/buyer/widget/dd2degs8bq3caj/LVY808G3TP4RZ.js"></script>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact-info">
+    📍 Fraser Rise, Victoria <br><br>
+    📞 0412 828 016 <br><br>
+    📧 <a href="mailto:admin@luxepawsgrooming.com.au">admin@luxepawsgrooming.com.au</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Luxe Paws Grooming — Luxury Dog Grooming Experience
+</footer>
+
+</body>
+</html>
