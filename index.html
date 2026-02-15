@@ -15,12 +15,9 @@
     line-height: 1.6;
     scroll-behavior: smooth;
 
-    /* Subtle paw background */
-    background-image: url("https://www.transparenttextures.com/patterns/paws.png");
-    background-size: 300px;
-    background-repeat: repeat;
-    background-blend-mode: overlay;
-    opacity: 1;
+    /* Embedded luxury paw background */
+    background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4af37' fill-opacity='0.04'%3E%3Ccircle cx='100' cy='120' r='30'/%3E%3Ccircle cx='70' cy='80' r='15'/%3E%3Ccircle cx='100' cy='70' r='18'/%3E%3Ccircle cx='130' cy='80' r='15'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 220px;
   }
 
   h1, h2, h3 {
@@ -45,7 +42,7 @@
 
   .tagline {
     font-size: 1.1rem;
-    color: #d4af37; /* gold accent */
+    color: #d4af37;
     margin-bottom: 40px;
     letter-spacing: 2px;
   }
@@ -185,17 +182,6 @@
     box-shadow: 0 20px 60px rgba(0,0,0,0.05);
   }
 
-  /* Social */
-  .social-box {
-    text-align: center;
-    padding: 60px;
-    background: #fff;
-    border-radius: 30px;
-    max-width: 750px;
-    margin: auto;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.05);
-  }
-
   /* Contact */
   .contact-info {
     text-align: center;
@@ -218,7 +204,7 @@
 
 <header class="hero">
   <img src="logo.JPG" alt="Luxe Paws Grooming Logo" class="logo">
-  <p class="tagline">PREMIUM • GENTLE • HAPPY PAWS</p>
+  <p class="tagline">PREMIUM • GENTLE • LUXURY FINISH</p>
   <a href="#booking"><button class="btn">Book Your Appointment</button></a>
 </header>
 
@@ -272,6 +258,7 @@
 <section id="booking">
   <h2>Book Online</h2>
   <div style="text-align:center; max-width:900px; margin:auto;">
+    <!-- Square Appointments Embed -->
     <script src="https://app.squareup.com/appointments/buyer/widget/dd2degs8bq3caj/LVY808G3TP4RZ.js"></script>
   </div>
 </section>
