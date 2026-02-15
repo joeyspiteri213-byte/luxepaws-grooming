@@ -17,7 +17,7 @@ body {
   position: relative;
 }
 
-/* Subtle Paw Background */
+/* Paw prints background */
 body::before {
   content: "🐾 🐾 🐾 🐾 🐾 🐾 🐾 🐾";
   position: fixed;
@@ -31,31 +31,59 @@ body::before {
   pointer-events: none;
 }
 
-/* HERO LOGO */
-.logo-wrapper {
+/* NAVIGATION */
+nav {
+  position: fixed;
+  top: 0;
   width: 100%;
-  overflow: hidden;
-  text-align: center;
-  background: #000;
+  background: #111;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
-.logo-wrapper img {
-  height: 120px;      
-  width: 100%;        
-  object-fit: contain; 
-  display: block;
+nav .logo-nav {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo-nav img {
+  height: 60px;
+  width: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #d4af37;
 }
 
 /* HERO SECTION */
 section.hero {
-  padding: 40px 20px 60px 20px;
+  padding: 120px 20px 60px 20px;
   text-align: center;
   position: relative;
   z-index: 1;
 }
 
-.tagline {
-  font-size: 1.1rem;
+.hero .tagline {
+  font-size: 1.2rem;
   color: #d4af37;
   margin-top: 20px;
   letter-spacing: 2px;
@@ -73,6 +101,7 @@ section.hero {
   cursor: pointer;
   transition: 0.3s;
   margin-top: 20px;
+  display: inline-block;
 }
 
 .btn:hover {
@@ -136,7 +165,19 @@ footer {
   color: #d4af37;
 }
 
-/* SQUARE WIDGET CONTAINER */
+/* CONTACT INFO */
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.contact-info li {
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+
+/* SQUARE WIDGET */
 #square-widget {
   min-height: 600px;
   margin-top: 40px;
@@ -146,12 +187,21 @@ footer {
 
 <body>
 
-<!-- HERO LOGO -->
-<div class="logo-wrapper">
-  <img src="logo.png" alt="Luxe Paws Grooming Logo">
-</div>
+<!-- NAVIGATION -->
+<nav>
+  <div class="logo-nav">
+    <img src="logo.png" alt="Luxe Paws Logo">
+  </div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#booking">Booking</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-<section class="hero">
+<!-- HERO -->
+<section id="home" class="hero">
   <p class="tagline">PREMIUM • GENTLE • HAPPY PAWS</p>
   <a href="#booking" class="btn">Book Your Appointment</a>
 </section>
@@ -166,7 +216,7 @@ footer {
   </div>
 </section>
 
-<!-- GALLERY SECTION -->
+<!-- GALLERY -->
 <section id="gallery">
   <h2>GALLERY</h2>
   <div class="gallery">
@@ -174,30 +224,4 @@ footer {
     <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b" alt="Groomed Dog">
     <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8" alt="Groomed Dog">
     <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16" alt="Groomed Dog">
-    <img src="https://images.unsplash.com/photo-1507149833265-60c372daea22" alt="Groomed Dog">
-    <img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2" alt="Groomed Dog">
-    <img src="https://images.unsplash.com/photo-1525253086316-d0c936c814f8" alt="Groomed Dog">
-    <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a" alt="Groomed Dog">
-    <img src="https://images.unsplash.com/photo-1504595403659-9088ce801e29" alt="Groomed Dog">
-    <img src="https://images.unsplash.com/photo-1518715308788-3005759c9c64" alt="Groomed Dog">
-  </div>
-</section>
-
-<!-- CONTACT SECTION -->
-<section id="contact">
-  <h2>CONTACT</h2>
-  <p>Email: <a href="mailto:admin@luxepawsgrooming.com.au">admin@luxepawsgrooming.com.au</a></p>
-  <p>Follow us:</p>
-  <div class="social-links">
-    <a href="https://www.facebook.com/luxepawsgroomingau" target="_blank">🔵 Facebook</a>
-    
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  © 2026 Luxe Paws Grooming | All Rights Reserved
-</footer>
-
-</body>
-</html>
+    <img src="https://images.unspla
