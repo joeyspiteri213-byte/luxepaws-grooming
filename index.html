@@ -41,7 +41,6 @@ body {
   margin-bottom: 30px;
 }
 
-/* ================= BUTTON ================= */
 .btn {
   padding: 14px 34px;
   border-radius: 30px;
@@ -49,9 +48,8 @@ body {
   background: #d4af37;
   color: #000;
   font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .btn:hover {
@@ -75,7 +73,6 @@ nav a {
   text-decoration: none;
   color: #111;
   font-weight: 500;
-  font-size: 0.95rem;
 }
 
 nav a:hover {
@@ -105,6 +102,46 @@ h2:after {
   margin: 15px auto 0;
 }
 
+/* ================= CARDS ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+.card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* ================= PRICING ================= */
+.pricing {
+  background: #fff;
+  padding: 60px;
+  border-radius: 28px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+  max-width: 750px;
+  margin: auto;
+}
+
+.pricing ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pricing li {
+  padding: 18px 0;
+  border-bottom: 1px solid #eee;
+}
+
 /* ================= GALLERY ================= */
 .gallery {
   display: grid;
@@ -117,7 +154,7 @@ h2:after {
   height: 250px;
   object-fit: cover;
   border-radius: 18px;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
 .gallery img:hover {
@@ -140,17 +177,10 @@ h2:after {
   border-radius: 20px;
   text-align: center;
   margin-bottom: 40px;
-  font-size: 1.1rem;
 }
 
 .deposit-box strong {
   color: #d4af37;
-}
-
-/* ================= CONTACT ================= */
-.contact-info {
-  text-align: center;
-  font-size: 1.1rem;
 }
 
 /* ================= FOOTER ================= */
@@ -159,7 +189,6 @@ footer {
   padding: 40px;
   background: #000;
   color: #fff;
-  font-size: 0.9rem;
 }
 
 </style>
@@ -182,15 +211,52 @@ footer {
   <a href="#contact">Contact</a>
 </nav>
 
+<section id="about">
+  <h2>About Luxe Paws Grooming</h2>
+  <p style="text-align:center; max-width:800px; margin:auto;">
+    Luxe Paws Grooming provides professional, gentle dog grooming in Fraser Rise VIC 3336.
+    We focus on calm handling, premium products and creating a stress-free experience for every dog.
+  </p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Full Groom</h3>
+      <p>Complete wash, clip, style and finishing.</p>
+    </div>
+    <div class="card">
+      <h3>Bath & Blow Dry</h3>
+      <p>Deep cleanse and conditioning treatment.</p>
+    </div>
+    <div class="card">
+      <h3>Puppy Groom</h3>
+      <p>Gentle introduction to grooming.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2>Pricing</h2>
+  <div class="pricing">
+    <ul>
+      <li>Full Groom — From $80</li>
+      <li>Bath & Blow Dry — From $40</li>
+      <li>Puppy Groom — From $40</li>
+    </ul>
+  </div>
+</section>
+
 <section id="gallery">
   <h2>Recent Grooms</h2>
   <div class="gallery">
-    <img src="https://scontent.fmel18-1.fna.fbcdn.net/v/t39.30808-6/634938310_122104939893250918_5312364326460455774_n.jpg">
-    <img src="https://scontent.fmel18-1.fna.fbcdn.net/v/t39.30808-6/634838576_122104939941250918_1451929684078030145_n.jpg">
-    <img src="https://scontent.fmel18-1.fna.fbcdn.net/v/t39.30808-6/634350366_122104939461250918_5094786305224701530_n.jpg">
-    <img src="https://scontent.fmel18-1.fna.fbcdn.net/v/t39.30808-6/632943733_122104939509250918_2297172035956649300_n.jpg">
-    <img src="https://scontent.fmel18-1.fna.fbcdn.net/v/t39.30808-6/633453380_122104938669250918_8719156061710669594_n.jpg">
-    <img src="https://scontent.fmel18-1.fna.fbcdn.net/v/t39.30808-6/636906726_122104938729250918_4360347642525632947_n.jpg">
+    <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a">
+    <img src="https://images.unsplash.com/photo-1507149833265-60c372daea22">
+    <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d">
+    <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16">
+    <img src="https://images.unsplash.com/photo-1525253086316-d0c936c814f8">
+    <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8">
   </div>
 </section>
 
@@ -198,22 +264,22 @@ footer {
   <h2>Book Online</h2>
 
   <div class="deposit-box">
-    A <strong>$40 deposit</strong> is required to secure all grooming appointments.
-    This deposit goes toward your final service total.
+    A <strong>$40 deposit</strong> is required to secure all appointments.
+    Deposit is deducted from your final service total.
   </div>
 
-  <div style="text-align:center; max-width:900px; margin:auto;">
+  <div style="text-align:center;">
     <script src="https://app.squareup.com/appointments/buyer/widget/4v3wifu71g2g45/LVY808G3TP4RZ.js"></script>
   </div>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
-  <div class="contact-info">
+  <div style="text-align:center;">
     📍 Fraser Rise VIC 3336<br><br>
     📞 0412 828 016<br><br>
     📧 admin@luxepawsgrooming.com.au<br><br>
-    👍 Follow us on Facebook
+    👍 <a href="https://www.facebook.com/luxepawsgroomingau" target="_blank">Follow us on Facebook</a>
   </div>
 </section>
 
