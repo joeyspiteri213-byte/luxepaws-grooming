@@ -5,9 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Luxe Paws Grooming</title>
 
+<meta name="description" content="Luxe Paws Grooming in Fraser Rise VIC. Premium, gentle dog grooming services including full grooms, puppy grooms, and bath & blow dry. Book online today.">
+
 <meta name="google-site-verification" content="VHJxXJLrVcQ2qzsIXpMMGpmzjFg9-BNCoZ0b1xxeVUs" />
 
-<!-- Premium Google Fonts -->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -45,14 +49,11 @@ section {
   color: #fff;
   text-align: center;
   padding: 120px 20px;
-  position: relative;
 }
 
 .hero-logo {
   width: 260px;
-  height: auto;
   margin-bottom: 25px;
-  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.3));
 }
 
 .tagline {
@@ -71,51 +72,32 @@ section {
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(212,175,55,0.4);
 }
 
 .btn:hover {
   background: #000;
   color: #d4af37;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-  transform: translateY(-3px);
 }
 
-  
-/* ======================= NAVIGATION — LUXURY BLACK-GOLD ======================= */
+/* ======================= NAV ======================= */
 nav {
   position: sticky;
   top: 0;
-  background: linear-gradient(180deg, #0c0c0c 0%, #000 95%);
-  backdrop-filter: blur(10px);
+  background: #000;
   text-align: center;
-  padding: 28px 0;
-  border-bottom: 2px solid rgba(212,175,55,0.6);
+  padding: 20px 0;
   z-index: 10;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.7);
 }
 
 nav a {
-  margin: 0 32px;
+  margin: 0 20px;
   text-decoration: none;
-  color: #f4f4f4;
+  color: #fff;
   font-weight: 600;
-  font-size: 1.05rem;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
 }
 
 nav a:hover {
   color: #d4af37;
-  text-shadow: 0 0 10px rgba(212,175,55,0.7);
-  transform: translateY(-2px);
-}
-
-nav a:active {
-  color: #f8e58c;
-}
-
 }
 
 /* ======================= HEADINGS ======================= */
@@ -123,9 +105,7 @@ h2 {
   text-align: center;
   font-family: "Playfair Display", serif;
   font-size: 2.5rem;
-  font-weight: 600;
   margin-bottom: 50px;
-  position: relative;
 }
 
 h2:after {
@@ -137,7 +117,7 @@ h2:after {
   margin: 20px auto 0;
 }
 
-/* ======================= GRID & CARDS ======================= */
+/* ======================= GRID ======================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -145,26 +125,15 @@ h2:after {
 }
 
 .card {
-  background: #fffefb;
   padding: 40px;
   border-radius: 24px;
   text-align: center;
   border: 1px solid rgba(212,175,55,0.15);
-  box-shadow: 0 15px 45px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-}
-
-.card h3 {
-  font-family: "Playfair Display", serif;
-  color: #111;
-  margin-bottom: 15px;
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+  transform: translateY(-5px);
 }
-
 
 /* ======================= GALLERY ======================= */
 .gallery {
@@ -178,27 +147,12 @@ h2:after {
   height: 250px;
   object-fit: cover;
   border-radius: 18px;
-  border: 2px solid #fff;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
-  transition: 0.3s;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
 }
 
 /* ======================= BOOKING ======================= */
-#booking {
-  background: #fff;
-  border-radius: 30px;
-  padding: 80px 30px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.05);
-}
-
 .deposit-box {
   background: #000;
   color: #fff;
-  border: 1px solid #d4af37;
   padding: 25px;
   border-radius: 20px;
   text-align: center;
@@ -213,24 +167,16 @@ h2:after {
 .contact-info {
   text-align: center;
   font-weight: 600;
-  font-size: 1.05rem;
-  line-height: 2;
 }
 
 .contact-item {
   display: block;
-}
-
-.icon {
-  margin-right: 8px;
-  font-size: 1.2rem;
-  color: #d4af37;
+  margin: 10px 0;
 }
 
 .contact-info a {
   color: #111;
   text-decoration: none;
-  font-weight: 700;
 }
 
 .contact-info a:hover {
@@ -240,13 +186,26 @@ h2:after {
 /* ======================= FOOTER ======================= */
 footer {
   text-align: center;
-  padding: 50px;
-  background: linear-gradient(135deg, #111 20%, #000 100%);
+  padding: 40px;
+  background: #000;
   color: #fff;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  font-size: 0.95rem;
-  box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
+}
+
+/* ======================= MOBILE ======================= */
+@media (max-width: 768px) {
+  section {
+    padding: 50px 20px;
+    margin: 40px 15px;
+  }
+
+  nav a {
+    margin: 0 10px;
+    font-size: 0.9rem;
+  }
+
+  .hero-logo {
+    width: 180px;
+  }
 }
 
 </style>
@@ -271,81 +230,58 @@ footer {
 <section id="about">
   <h2>About Luxe Paws Grooming</h2>
   <p style="text-align:center; max-width:800px; margin:auto;">
-    Luxe Paws Grooming provides professional, gentle dog grooming in Fraser Rise VIC 3336. 
-    We focus on calm handling, premium products, and creating a stress-free experience for every dog.
+    Welcome to Luxe Paws Grooming, your local dog grooming salon in Fraser Rise!
+    We provide gentle, professional grooming in a safe environment.
   </p>
 </section>
 
 <section id="services">
   <h2>Our Services</h2>
   <div class="grid">
-    <div class="card">
-      <h3>Full Groom</h3>
-      <p>Bath, Blow Dry, Brush, Sanitary, Nails, Ears, Full Body Trim, Face, Cologne.</p>
-    </div>
-    <div class="card">
-      <h3>Bath & Blow Dry</h3>
-      <p>Bath, Blow Dry, Brush, Cologne.</p>
-    </div>
-    <div class="card">
-      <h3>Puppy's First Groom (Up To 6 Months Old)</h3>
-      <p>Introduction to Bath, Blow Dry, Brush, and Nails.</p>
-    </div>
-    <div class="card">
-      <h3>Tidy Groom</h3>
-      <p>Bath, Blow Dry, Brush, Sanitary, Nails, Ears, Face, Cologne.</p>
-    </div>
+    <div class="card"><h3>Full Groom</h3><p>Full service grooming.</p></div>
+    <div class="card"><h3>Bath & Blow Dry</h3><p>Wash and dry service.</p></div>
+    <div class="card"><h3>Puppy Groom</h3><p>For puppies under 6 months.</p></div>
+    <div class="card"><h3>Tidy Groom</h3><p>Maintenance grooming.</p></div>
   </div>
 </section>
-
 
 <section id="gallery">
   <h2>Recent Grooms</h2>
   <div class="gallery">
-    <img src="1.jpg" alt="Groom 1">
-    <img src="2.jpg" alt="Groom 2">
-    <img src="3.jpg" alt="Groom 3">
-    <img src="4.jpg" alt="Groom 4">
-    <img src="5.jpg" alt="Groom 5">
-    <img src="6.jpg" alt="Groom 6">
-    <img src="7.jpg" alt="Groom 7">
-    <img src="8.jpg" alt="Groom 8">
-    <img src="9.jpg" alt="Groom 9">
-    <img src="10.jpg" alt="Groom 10">
-    <img src="11.jpg" alt="Groom 11">
-    <img src="12.jpg" alt="Groom 12">
-    <img src="13.jpg" alt="Groom 13">
-    <img src="14.jpg" alt="Groom 14">
+    <img src="1.jpg" alt="Dog grooming Luxe Paws Fraser Rise">
+    <img src="2.jpg" alt="Dog grooming Luxe Paws Fraser Rise">
+    <img src="3.jpg" alt="Dog grooming Luxe Paws Fraser Rise">
   </div>
 </section>
 
 <section id="booking">
   <h2>Book Online</h2>
   <div class="deposit-box">
-    A <strong>$40 deposit</strong> is required to secure all appointments. 
-    Deposit is deducted from your final service total.
+    A <strong>$40 deposit</strong> is required to secure all appointments.
   </div>
-  <div style="text-align:center;">
-    <script src="https://app.squareup.com/appointments/buyer/widget/ybzch5dsyplegn/LVY808G3TP4RZ.js"></script>
-  </div>
+  <script src="https://app.squareup.com/appointments/buyer/widget/ybzch5dsyplegn/LVY808G3TP4RZ.js"></script>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
   <div class="contact-info">
-    <span class="contact-item"><span class="icon">📍</span> Fraser Rise VIC 3336</span>
-    <span class="contact-item"><span class="icon">📞</span> 0412 828 016</span>
-    <span class="contact-item"><span class="icon">📧</span> 
-      <a href="mailto:admin@luxepawsgrooming.com.au">admin@luxepawsgrooming.com.au</a>
+    <span class="contact-item">📍 Fraser Rise VIC 3336</span>
+    <span class="contact-item">📞 0412 828 016</span>
+    <span class="contact-item">🕒 Mon–Sat: 9am – 5pm</span>
+    <span class="contact-item">
+      📧 <a href="mailto:admin@luxepawsgrooming.com.au">admin@luxepawsgrooming.com.au</a>
     </span>
-    <span class="contact-item"><span class="icon">👍</span>
-      <a href="https://www.facebook.com/luxepawsgroomingau" target="_blank">Follow us on Facebook</a>
+    <span class="contact-item">
+      👍 <a href="https://www.facebook.com/luxepawsgroomingau" target="_blank" rel="noopener noreferrer">Facebook</a>
+    </span>
+    <span class="contact-item">
+      📍 <a href="https://maps.google.com?q=Fraser+Rise+VIC+3336" target="_blank">View on Google Maps</a>
     </span>
   </div>
 </section>
 
 <footer>
-  © 2026 Luxe Paws Grooming — Luxury Dog Grooming Experience
+  © 2026 Luxe Paws Grooming
 </footer>
 
 </body>
