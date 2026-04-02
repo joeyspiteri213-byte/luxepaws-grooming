@@ -23,6 +23,7 @@ body {
   line-height: 1.7;
 }
 
+/* SECTIONS */
 section {
   max-width: 1100px;
   margin: 80px auto;
@@ -52,10 +53,9 @@ section {
 .btn {
   padding: 14px 38px;
   border-radius: 40px;
-  background: linear-gradient(120deg, #d4af37, #f8e58c);
+  background: #d4af37;
   color: #111;
   text-decoration: none;
-  display: inline-block;
 }
 
 /* NAV */
@@ -65,7 +65,6 @@ nav {
   background: #000;
   text-align: center;
   padding: 20px 0;
-  z-index: 10;
 }
 
 nav a {
@@ -117,16 +116,7 @@ h2 {
 
 .policy h3 {
   margin-top: 30px;
-}
-
-/* CONTACT */
-.contact-info {
-  text-align: center;
-}
-
-.contact-item {
-  display: block;
-  margin: 10px 0;
+  color: #000;
 }
 
 /* FOOTER */
@@ -152,7 +142,7 @@ footer {
 <header class="hero">
   <img src="logo.PPG.png" alt="Luxe Paws Grooming Logo" class="hero-logo">
   <p class="tagline">PREMIUM • GENTLE • HAPPY PAWS</p>
-  <a href="#booking" class="btn">Book Your Appointment</a>
+  <a href="#booking" class="btn">Book Now</a>
 </header>
 
 <nav>
@@ -166,55 +156,35 @@ footer {
 </nav>
 
 <section id="about">
-  <h2>About Luxe Paws Grooming</h2>
-  <p style="text-align:center; max-width:800px; margin:auto;">
-    Welcome to Luxe Paws Grooming, your local dog grooming salon in Fraser Rise! 
-    We provide gentle, professional grooming in a safe and caring environment.
-  </p>
+  <h2>About</h2>
+  <p style="text-align:center;">Premium dog grooming in Fraser Rise.</p>
 </section>
 
 <section id="services">
-  <h2>Our Services</h2>
+  <h2>Services</h2>
   <div class="grid">
     <div>Full Groom</div>
     <div>Bath & Blow Dry</div>
-    <div>Puppy's First Groom</div>
+    <div>Puppy Groom</div>
     <div>Tidy Groom</div>
   </div>
 </section>
 
 <section id="gallery">
-  <h2>Recent Grooms</h2>
+  <h2>Gallery</h2>
   <div class="grid gallery">
     <img src="1.jpg" alt="Dog grooming Luxe Paws Fraser Rise">
     <img src="2.jpg" alt="Dog grooming Luxe Paws Fraser Rise">
-    <img src="3.jpg" alt="Dog grooming Luxe Paws Fraser Rise">
-    <img src="4.jpg" alt="Dog grooming Luxe Paws Fraser Rise">
   </div>
 </section>
 
 <!-- ⭐ REVIEWS -->
 <section id="reviews">
   <h2>Customer Reviews</h2>
-
   <div class="review-box">
     <div class="review-stars">★★★★★</div>
-
-    <p>
-      We’re proud to provide a premium, gentle grooming experience for every dog that visits us.
-    </p>
-
-    <a href="https://g.page/r/CS-ebOw5uBglEAI/review" target="_blank" rel="noopener noreferrer" class="btn">
-      ⭐ Leave a Google Review
-    </a>
-
-    <div style="margin-top:40px;">
-      <p><strong>“Amazing service! My dog came out looking perfect.”</strong></p>
-      <p>– Happy Customer</p>
-
-      <p><strong>“Best groomer around. Highly recommend!”</strong></p>
-      <p>– Local Client</p>
-    </div>
+    <p>We love making pets look and feel amazing! Check out what our customers are saying.</p>
+    <a href="https://g.page/r/YOUR-GOOGLE-REVIEW-LINK/review" target="_blank" class="btn">Leave a Review</a>
   </div>
 </section>
 
@@ -228,43 +198,56 @@ footer {
   <h2>Terms & Conditions</h2>
   <div class="policy">
 
-<p><strong>Cancellation, Rescheduling & No-Show Policy</strong></p>
+    <p><strong>Cancellation, Rescheduling & No-Show Policy</strong></p>
 
-<p>At Luxe Paws Grooming Salon, appointment times are reserved specifically for you and your pet. Because grooming services require dedicated staff and preparation, we ask that all clients follow the policy below.</p>
+    <p>At Luxe Paws Grooming Salon, appointment times are reserved specifically for you and your pet. Because grooming services require dedicated staff and preparation, we ask that all clients follow the policy below.</p>
 
-<h3>Rescheduling Policy:</h3>
-<p>Clients may reschedule appointments with at least 24 hours’ notice without penalty.</p>
-<p>Rescheduling with less than the required notice may be treated as a late cancellation.</p>
+    <h3>Rescheduling Policy</h3>
+    <p>We understand that plans change. Clients may reschedule appointments with at least 24 hours’ notice without penalty.
+• Rescheduling with less than the required notice may be treated as a late cancellation.</p>
 
-<h3>Late Cancellation Fee:</h3>
-<p>Cancellations made within less than 24 hours will be subject to a fee of 50% of the scheduled service cost.</p>
+    <h3>Late Cancellation Fee</h3>
+    <p>Cancellations made within less than 24 hours of the scheduled appointment time will be subject to a late cancellation fee of:
+• 50% of the scheduled service cost
+This helps cover the time reserved for your pet.</p>
 
-<h3>No-Show Policy:</h3>
-<p>No-shows will be charged 100% of the grooming service fee.</p>
-<p>After two no-shows, clients may be required to prepay or be declined future bookings.</p>
+    <h3>No-Show Policy</h3>
+    <p>A no-show occurs when a client does not arrive for their appointment and does not contact us in advance.
+No-shows will be charged:
+• 100% of the grooming service fee
+After two no-shows, clients may be required to:
+• Prepay in full for future appointments, or
+• Be declined further bookings</p>
 
-<h3>Late Arrival Policy:</h3>
-<p>If you are more than 15 minutes late, we may shorten or reschedule your appointment. Full fee still applies.</p>
+    <h3>Late Arrival</h3>
+    <p>Please arrive on time. If you are more than 15 minutes late, we may need to:
+• Shorten the grooming session, or
+• Reschedule the appointment
+Late arrivals will still be charged the full-service amount.</p>
 
-<h3>Deposits:</h3>
-<p>Deposits are required and are non-refundable within the 24-hour period.</p>
+    <h3>Deposits</h3>
+    <p>We require a deposit to secure your booking.
+Your deposit will be applied toward your final service total.
+Cancellation within the 24-hour notice period is non-refundable.</p>
 
-<h3>Emergency Exceptions:</h3>
-<p>Fees may be waived in cases of medical emergencies, severe weather, or unexpected situations.</p>
-
-<p>Thank you for your understanding. These policies help us provide the best care for every pet.</p>
+    <h3>Emergency Exceptions</h3>
+    <p>We understand emergencies happen. Fees may be waived at management discretion in cases of:
+• Medical emergencies
+• Severe weather
+• Unexpected family situations
+Please contact us as soon as possible if something arises.
+   Thankyou for your understanding.
+These policies allow us to provide the best care, maintain scheduling fairness, and ensure every pet receives the time and attention they deserve.</p>
 
   </div>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
-  <div class="contact-info">
-    <span class="contact-item">📍 Fraser Rise VIC 3336</span>
-    <span class="contact-item">📞 0412 828 016</span>
-    <span class="contact-item">🕒 Mon–Sat: 9am – 5pm</span>
-    <span class="contact-item">📧 admin@luxepawsgrooming.com.au</span>
-  </div>
+  <p style="text-align:center;">
+    Fraser Rise VIC<br>
+    0412 828 016
+  </p>
 </section>
 
 <footer>
