@@ -12,17 +12,24 @@
 <style>
   /* ── CSS VARIABLES ── */
   :root {
+    /* Gold is retained only as a rare jewel accent (✦ ornaments, star ratings) */
     --gold: #c9a84c;
-    --gold-light: #e8d08a;
-    --gold-pale: #f5ead0;
+    --gold-light: #e6dcc2;
+
     --black: #0a0a0a;
-    --charcoal: #181818;
-    --off-white: #faf8f3;
-    --cream: #f2ede0;
-    --text-dark: #1a1a1a;
+    --charcoal: #141414;
+    --ink: #1a1a1a;
+
+    --white: #ffffff;
+    --off-white: #fbfbf9;
+    --soft: #f4f4f1;          /* clean near-white, replaces warm beige */
+
+    --text-dark: #141414;
     --text-mid: #4a4a4a;
-    --text-light: #8a8a8a;
-    --border: rgba(201,168,76,0.25);
+    --text-light: #9a9a9a;
+
+    --line: rgba(20,20,20,0.12);        /* hairline on light backgrounds */
+    --line-dark: rgba(255,255,255,0.14); /* hairline on dark backgrounds */
   }
 
   /* ── RESET & BASE ── */
@@ -63,7 +70,7 @@
     background: rgba(10,10,10,0.92);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(201,168,76,0.15);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
     transition: padding 0.3s ease;
   }
 
@@ -72,7 +79,7 @@
     font-size: 1.3rem;
     font-weight: 300;
     letter-spacing: 6px;
-    color: var(--gold);
+    color: var(--white);
     text-decoration: none;
     text-transform: uppercase;
   }
@@ -84,7 +91,7 @@
   }
 
   .nav-links a {
-    color: rgba(255,255,255,0.65);
+    color: rgba(255,255,255,0.55);
     text-decoration: none;
     font-size: 0.68rem;
     letter-spacing: 3px;
@@ -93,7 +100,7 @@
     transition: color 0.3s;
   }
 
-  .nav-links a:hover { color: var(--gold); }
+  .nav-links a:hover { color: var(--white); }
 
   /* ── HERO ── */
   .hero {
@@ -114,7 +121,7 @@
     position: absolute;
     width: 700px;
     height: 700px;
-    background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255,255,255,0.07) 0%, transparent 70%);
     border-radius: 50%;
     top: 50%;
     left: 50%;
@@ -126,7 +133,7 @@
     content: '';
     position: absolute;
     inset: 40px;
-    border: 1px solid rgba(201,168,76,0.1);
+    border: 1px solid rgba(255,255,255,0.08);
     pointer-events: none;
   }
 
@@ -138,7 +145,7 @@
   .hero-ornament {
     font-size: 0.6rem;
     letter-spacing: 8px;
-    color: var(--gold);
+    color: rgba(255,255,255,0.55);
     text-transform: uppercase;
     margin-bottom: 32px;
     opacity: 0;
@@ -158,7 +165,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(2.8rem, 6vw, 5rem);
     font-weight: 300;
-    color: #fff;
+    color: var(--white);
     letter-spacing: 2px;
     line-height: 1.2;
     margin-bottom: 16px;
@@ -168,7 +175,7 @@
 
   .hero-tagline em {
     font-style: italic;
-    color: var(--gold-light);
+    color: #eceae3;
   }
 
   .hero-sub {
@@ -187,21 +194,22 @@
     gap: 14px;
     padding: 16px 48px;
     background: transparent;
-    border: 1px solid var(--gold);
-    color: var(--gold);
+    border: 1px solid rgba(255,255,255,0.6);
+    color: var(--white);
     text-decoration: none;
     font-size: 0.65rem;
     letter-spacing: 5px;
     text-transform: uppercase;
     font-weight: 600;
-    transition: background 0.4s, color 0.4s;
+    transition: background 0.4s, color 0.4s, border-color 0.4s;
     opacity: 0;
     animation: fadeUp 1s ease 1.1s forwards;
   }
 
   .hero-cta:hover {
-    background: var(--gold);
+    background: var(--white);
     color: var(--black);
+    border-color: var(--white);
   }
 
   .hero-scroll {
@@ -227,7 +235,7 @@
   .scroll-line {
     width: 1px;
     height: 50px;
-    background: linear-gradient(to bottom, var(--gold), transparent);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.8), transparent);
     animation: scrollPulse 2s ease-in-out infinite;
   }
 
@@ -260,13 +268,24 @@
     content: '';
     flex: 1;
     height: 1px;
-    background: linear-gradient(to right, transparent, var(--gold));
+    background: linear-gradient(to right, transparent, rgba(20,20,20,0.28));
   }
 
   .divider::after {
-    background: linear-gradient(to left, transparent, var(--gold));
+    background: linear-gradient(to left, transparent, rgba(20,20,20,0.28));
   }
 
+  /* Lighter hairlines when the divider sits on a dark section */
+  .strip-dark .divider::before,
+  footer .divider::before {
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.32));
+  }
+  .strip-dark .divider::after,
+  footer .divider::after {
+    background: linear-gradient(to left, transparent, rgba(255,255,255,0.32));
+  }
+
+  /* The ✦ ornament keeps the lone gold accent */
   .divider-icon {
     color: var(--gold);
     font-size: 1rem;
@@ -283,11 +302,15 @@
     font-size: 0.6rem;
     letter-spacing: 6px;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--text-light);
     text-align: center;
     display: block;
     margin-bottom: 18px;
     font-weight: 600;
+  }
+
+  .strip-dark .section-label {
+    color: rgba(255,255,255,0.5);
   }
 
   .section-title {
@@ -302,7 +325,11 @@
 
   .section-title em {
     font-style: italic;
-    color: var(--gold);
+    color: var(--text-mid);
+  }
+
+  .strip-dark .section-title em {
+    color: rgba(255,255,255,0.72);
   }
 
   .strip-dark {
@@ -311,7 +338,7 @@
   }
 
   .strip-cream {
-    background: var(--cream);
+    background: var(--soft);
     padding: 120px 0;
   }
 
@@ -337,9 +364,9 @@
 
   .accent-card {
     padding: 28px 32px;
-    border: 1px solid var(--border);
-    border-left: 3px solid var(--gold);
-    background: #fff;
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--ink);
+    background: var(--white);
   }
 
   .accent-card h4 {
@@ -364,8 +391,8 @@
   }
 
   .service-card {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(201,168,76,0.12);
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.1);
     padding: 52px 44px;
     position: relative;
     transition: background 0.4s;
@@ -379,17 +406,17 @@
     left: 0;
     width: 3px;
     height: 0;
-    background: var(--gold);
+    background: var(--white);
     transition: height 0.4s ease;
   }
 
   .service-card:hover::before { height: 100%; }
-  .service-card:hover { background: rgba(201,168,76,0.04); }
+  .service-card:hover { background: rgba(255,255,255,0.05); }
 
   .service-num {
     font-family: 'Cormorant Garamond', serif;
     font-size: 3rem;
-    color: rgba(201,168,76,0.15);
+    color: rgba(255,255,255,0.16);
     font-weight: 300;
     line-height: 1;
     margin-bottom: 20px;
@@ -398,7 +425,7 @@
   .service-name {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.7rem;
-    color: #fff;
+    color: var(--white);
     font-weight: 400;
     margin-bottom: 12px;
   }
@@ -416,7 +443,7 @@
     font-size: 0.6rem;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: var(--gold);
+    color: rgba(255,255,255,0.55);
     font-weight: 600;
   }
 
@@ -450,8 +477,8 @@
 
   /* ── REVIEWS ── */
   .review-card {
-    background: #fff;
-    border: 1px solid var(--border);
+    background: var(--white);
+    border: 1px solid var(--line);
     padding: 48px 52px;
     max-width: 700px;
     margin: 0 auto 48px;
@@ -467,9 +494,8 @@
     transform: translateX(-50%);
     font-family: 'Cormorant Garamond', serif;
     font-size: 8rem;
-    color: var(--gold);
+    color: rgba(20,20,20,0.1);
     line-height: 1;
-    opacity: 0.25;
     pointer-events: none;
   }
 
@@ -495,7 +521,7 @@
     gap: 12px;
     padding: 14px 40px;
     background: var(--black);
-    color: var(--gold);
+    color: var(--white);
     text-decoration: none;
     font-size: 0.65rem;
     letter-spacing: 4px;
@@ -508,7 +534,7 @@
   .review-cta:hover {
     background: transparent;
     color: var(--text-dark);
-    border-color: var(--gold);
+    border-color: var(--ink);
   }
 
   /* ── BOOKING ── */
@@ -529,8 +555,8 @@
 
   .policy-block {
     padding: 40px 44px;
-    background: #fff;
-    border-top: 2px solid var(--cream);
+    background: var(--white);
+    border-top: 2px solid var(--soft);
   }
 
   .policy-block h3 {
@@ -554,7 +580,7 @@
 
   .policy-block ul li::before {
     content: '—';
-    color: var(--gold);
+    color: var(--ink);
     margin-right: 8px;
   }
 
@@ -579,21 +605,22 @@
   .contact-item {
     text-align: center;
     padding: 40px 20px;
-    border: 1px solid var(--border);
-    background: #fff;
+    border: 1px solid var(--line-dark);
+    background: rgba(255,255,255,0.04);
   }
 
   .contact-icon {
     font-size: 1.4rem;
     margin-bottom: 16px;
     display: block;
+    filter: grayscale(1) brightness(1.6);
   }
 
   .contact-label {
     font-size: 0.6rem;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: var(--gold);
+    color: rgba(255,255,255,0.5);
     font-weight: 600;
     margin-bottom: 10px;
     display: block;
@@ -602,7 +629,7 @@
   .contact-value {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.1rem;
-    color: var(--text-dark);
+    color: var(--white);
   }
 
   .contact-value a {
@@ -611,12 +638,12 @@
     transition: color 0.3s;
   }
 
-  .contact-value a:hover { color: var(--gold); }
+  .contact-value a:hover { color: rgba(255,255,255,0.6); }
 
   /* ── FOOTER ── */
   footer {
     background: var(--black);
-    border-top: 1px solid rgba(201,168,76,0.15);
+    border-top: 1px solid rgba(255,255,255,0.08);
     padding: 56px 40px;
     text-align: center;
   }
@@ -626,7 +653,7 @@
     font-size: 1.1rem;
     letter-spacing: 8px;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--white);
     margin-bottom: 24px;
   }
 
@@ -647,7 +674,7 @@
     transition: color 0.3s;
   }
 
-  .footer-links a:hover { color: var(--gold); }
+  .footer-links a:hover { color: var(--white); }
 
   .footer-copy {
     font-size: 0.7rem;
@@ -692,7 +719,7 @@
 <header class="hero">
   <p class="hero-ornament">Fraser Rise, Victoria</p>
   <img src="logo.PPG.png" alt="Luxe Paws Grooming" class="hero-logo">
-  <h1 class="hero-tagline">Where every dog is<br><em>treated like royalty</em></h1>
+  <h1 class="hero-tagline">Where every dog is<br><em>treated like family</em></h1>
   <p class="hero-sub">Premium &nbsp;•&nbsp; Gentle &nbsp;•&nbsp; Happy Paws</p>
   <a href="#booking" class="hero-cta">Reserve Your Appointment</a>
   <div class="hero-scroll">
@@ -734,7 +761,7 @@
   <div class="section" id="services">
     <span class="section-label">What We Offer</span>
     <h2 class="section-title" style="color:#fff;">Our <em>grooming</em> services</h2>
-    <div class="divider"><span class="divider-icon" style="color:var(--gold)">✦</span></div>
+    <div class="divider"><span class="divider-icon">✦</span></div>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-num">01</div>
@@ -857,35 +884,35 @@
     <h2 class="section-title" style="color:#fff;">Find <em>us</em></h2>
     <div class="divider"><span class="divider-icon">✦</span></div>
     <div class="contact-grid">
-      <div class="contact-item" style="background:rgba(255,255,255,0.04); border-color:rgba(201,168,76,0.15);">
+      <div class="contact-item">
         <span class="contact-icon">📍</span>
         <span class="contact-label">Location</span>
-        <span class="contact-value"><a href="https://maps.google.com?q=Fraser+Rise+VIC+3336" target="_blank" style="color:#fff;">Fraser Rise VIC 3336</a></span>
+        <span class="contact-value"><a href="https://maps.google.com?q=Fraser+Rise+VIC+3336" target="_blank">Fraser Rise VIC 3336</a></span>
       </div>
-      <div class="contact-item" style="background:rgba(255,255,255,0.04); border-color:rgba(201,168,76,0.15);">
+      <div class="contact-item">
         <span class="contact-icon">📞</span>
         <span class="contact-label">Phone</span>
-        <span class="contact-value"><a href="tel:0412828016" style="color:#fff;">0412 828 016</a></span>
+        <span class="contact-value"><a href="tel:0412828016">0412 828 016</a></span>
       </div>
-      <div class="contact-item" style="background:rgba(255,255,255,0.04); border-color:rgba(201,168,76,0.15);">
+      <div class="contact-item">
         <span class="contact-icon">🕒</span>
         <span class="contact-label">Hours</span>
-        <span class="contact-value" style="color:#fff;">Mon – Sat: 9am – 5pm</span>
+        <span class="contact-value">Mon – Sat: 9am – 5pm</span>
       </div>
-      <div class="contact-item" style="background:rgba(255,255,255,0.04); border-color:rgba(201,168,76,0.15);">
+      <div class="contact-item">
         <span class="contact-icon">📧</span>
         <span class="contact-label">Email</span>
-        <span class="contact-value"><a href="mailto:admin@luxepawsgrooming.com.au" style="color:var(--gold-light); font-size:0.85rem;">admin@luxepawsgrooming.com.au</a></span>
+        <span class="contact-value"><a href="mailto:admin@luxepawsgrooming.com.au" style="font-size:0.85rem;">admin@luxepawsgrooming.com.au</a></span>
       </div>
-      <div class="contact-item" style="background:rgba(255,255,255,0.04); border-color:rgba(201,168,76,0.15);">
+      <div class="contact-item">
         <span class="contact-icon">👍</span>
         <span class="contact-label">Facebook</span>
-        <span class="contact-value"><a href="https://www.facebook.com/luxepawsgroomingau" target="_blank" rel="noopener noreferrer" style="color:var(--gold-light);">luxepawsgroomingau</a></span>
+        <span class="contact-value"><a href="https://www.facebook.com/luxepawsgroomingau" target="_blank" rel="noopener noreferrer">luxepawsgroomingau</a></span>
       </div>
-      <div class="contact-item" style="background:rgba(255,255,255,0.04); border-color:rgba(201,168,76,0.15);">
+      <div class="contact-item">
         <span class="contact-icon">📍</span>
         <span class="contact-label">Google Maps</span>
-        <span class="contact-value"><a href="https://maps.google.com?q=Fraser+Rise+VIC+3336" target="_blank" style="color:var(--gold-light);">View on Maps</a></span>
+        <span class="contact-value"><a href="https://maps.google.com?q=Fraser+Rise+VIC+3336" target="_blank">View on Maps</a></span>
       </div>
     </div>
   </div>
@@ -907,5 +934,3 @@
 
 </body>
 </html>
-
-
